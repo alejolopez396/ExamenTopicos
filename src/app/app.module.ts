@@ -11,8 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import{environment} from "../environments/environment";
 import {AngularFirestoreModule} from '@angular/fire/firestore'; 
+import { Camera } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 
 
@@ -23,13 +26,17 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
      IonicModule.forRoot(), 
      AppRoutingModule,
      AngularFireAuthModule,
+     AngularFireStorageModule,
      AngularFireModule.initializeApp(environment.firebase),
-     AngularFirestoreModule
+     AngularFirestoreModule,
+    //  
     ],
      
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

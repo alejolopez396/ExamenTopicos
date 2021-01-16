@@ -38,7 +38,7 @@ export class RegistrousuarioPage implements OnInit {
 
   registrousuario() {
     console.log(this.email);
-    if (this.email == undefined || this.password == undefined) {
+    if (this.email == undefined || this.password == undefined ||this.nombre==undefined) {
       alert('Campos Vacios')
     } else {
       console.log('verificar')

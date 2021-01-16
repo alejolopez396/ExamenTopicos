@@ -21,6 +21,14 @@ export class AuthService {
   usuarios:Observable <usuario[]>;
 
   constructor(private AFauth : AngularFireAuth, private db: AngularFirestore) {
+    this.usariosCollection = db.collection<usuario>('usuarios');
+    this.usuarios = this.usariosCollection.snapshotChanges().pipe(map(rooms => {
+      return rooms.map(a => {
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return { id, ...data }
+      })
+    }));
    }
 
   login(email:string,password:string){
@@ -43,5 +51,17 @@ export class AuthService {
       }).catch(err => rejected(err));
     })
     
+  }
+
+  obtenernombreUsuario(uid: string) {
+    return this.db.collection('usuarios').doc(uid).snapshotChanges();
+  }
+
+  isAuth() {
+    return this.AFauth.authState.pipe(map(auth => auth));
+  }
+
+  getUsuarios(){
+    return this.usuarios;
   }
 }
