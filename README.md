@@ -40,3 +40,6 @@ Desarrollo de un chat incluido login, con mensajes cifrados.
 
 ## Enlace del video
 Clic en el siguiente enlace [Video explicativo de la aplicación ](https://youtu.be/X8uaVe6NBqA). :white_check_mark:
+
+## Descarga El APK
+Descarga `APK` clic en el siguiente enlace [Ionic Chat](). :white_check_mark:
