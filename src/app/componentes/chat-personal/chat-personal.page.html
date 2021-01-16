@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title><ion-buttons>
+      <ion-button expand="block" (click)='cerrarChat()'>Cerrar Chat &nbsp; &nbsp; &nbsp;
+          <ion-icon name="exit"> </ion-icon>
+      </ion-button>
+  </ion-buttons></ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let men of mensajesSa.mensajes" style="margin-bottom: 5px;">
+      <span style="display: block; width: 100%;">
+        <ion-label >
+          <ion-icon name="caret-forward-outline"></ion-icon>{{men.nombre}}
+        </ion-label>
+        <ion-label style="color: #6c6c6c;">
+          {{men.mensaje}}
+        </ion-label>
+        <ion-item>
+          <ion-card size="width: 100%">
+            <ion-card-content>
+              <img [src]="men.img" class="card-img-top">
+            </ion-card-content>
+          </ion-card>
+        </ion-item>
+      </span>
+    </ion-item>
+  </ion-list>
+
+  
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-row class="ion-align-items-center">
+      <ion-col size="6">
+        <ion-textarea autoGrow="true" class="message-input" rows="1" maxLength="500" [(ngModel)]="newMsg" (keyup.enter)="enviarMensaje()">
+        </ion-textarea>
+      </ion-col>
+      <ion-col size="3" class="ion-align-items-end" float-right>
+        <ion-button expand="block" fill="clear" color="primary" [disabled]="newMsg === ''"
+          class="msg-btn" (click)="enviarMensaje()" >
+          <ion-icon name="caret-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="3" class="ion-align-items-end" float-right (click)="presentAlertCamera()">
+        <ion-button expand="block" fill="clear" color="primary" [disabled]="newMsg === ''"
+          class="msg-btn" (click)="enviarMensaje()" >
+          <ion-icon name="image-outline"style="background-color: white;" ></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

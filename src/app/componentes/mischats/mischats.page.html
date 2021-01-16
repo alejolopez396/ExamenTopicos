@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title><ion-buttons>
+      <ion-button expand="block" (click)='irAContactos()'>Regresar a los contactos &nbsp; &nbsp; &nbsp;
+          <ion-icon name="exit"> </ion-icon>
+      </ion-button>
+  </ion-buttons></ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let usu of mischats" > 
+    <ion-label>
+      <ion-label>{{usu.nombre1}} & {{usu.nombre2}}</ion-label>
+      <ion-button (click)="salaPrivada(usu.id)" expand="block">chatear</ion-button>
+    </ion-label>
+  </ion-item>
+
+  <ion-button (click)="salir()">Cerra Sesión</ion-button>
+</ion-content>

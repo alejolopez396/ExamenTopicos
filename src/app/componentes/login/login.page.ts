@@ -29,6 +29,8 @@ export class LoginPage implements OnInit {
 
   registrousuario(){
     console.log('funciona');
+    this.email='';
+    this.password='';
     this.router.navigate(['/registrousuario']);
   }
 
