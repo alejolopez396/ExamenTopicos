@@ -37,3 +37,6 @@ Desarrollo de un chat incluido login, con mensajes cifrados.
 
 ## Inconvenientes al realziar el proyecto:
 * *No se pudo decifrar los mensajes puesto que al momnto de cifrarlos no podia desencriptarlos
+
+## Enlace del video
+Clic en el siguiente enlace [Video explicativo de la aplicación ](https://youtu.be/X8uaVe6NBqA). :white_check_mark:
