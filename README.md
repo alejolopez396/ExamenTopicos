@@ -34,3 +34,6 @@ Desarrollo de un chat incluido login, con mensajes cifrados.
 ## Observaciones:
 
 * *Se Necesita versión de Android 9 o más
+
+## Inconvenientes al realziar el proyecto:
+* *No se pudo decifrar los mensajes puesto que al momnto de cifrarlos no podia desencriptarlos
